@@ -16,7 +16,6 @@ app.get("/", (request, response) => {
 //Cria a conversão no RDStation
 app.post("/conversion", async (req, res, next) => {
   try {
-      console.log(req.body);
     let conversion = await axios({ method: 'POST', url: process.env.RD_API_CONVERSION,
       header: {
         "Content-Type": "application/json"
